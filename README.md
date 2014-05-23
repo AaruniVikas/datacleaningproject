@@ -87,26 +87,26 @@
         
 ### Create a tidy data via a R script called run_analysis.R
       
-    * Preparation:  data sets and script
-         + The data sets and run_analysis.R must be in the working directory.
+  * Preparation:  data sets and script
+       + The data sets and run_analysis.R must be in the working directory.
            It is based on one of the requirements this project: The code should have 
 	   a file run_analysis.R in the main directory that can be run as long as the Samsung
 	   data is in your working directory. (see "Instructions and Requirements")
       
-         + The input raw data for the run_analys.R are:
+       + The input raw data for the run_analys.R are:
         
             ./train/X_train.txt, ./train/y_train.txt, subject_train.txt;
             ./test/X_test.txt, ./test/y_test.txt,  subjecct_test.txt;
             ./activity_labels.txt, ./features.txt
         
-         + The output tidy data created from run_analysis.R are:
+       + The output tidy data created from run_analysis.R are:
             ./tidy_average_data.txt (180 rows)
             ./combinedcleaningdata.txt (optional)
         
-    * How the script run_analysis.R works
-         + Run the script via source("run_analysis.R")
+  * How the script run_analysis.R works via Rstudio
+       + source("run_analysis.R") and run the script
        
-         + There are 5 main steps in run_analysis.R to process the raw data sets and create the tidy data set.
+       + There are 5 main steps in run_analysis.R to process the raw data sets and create the tidy data set.
          
            Step-1: Merges the training and the test data sets to create one data set (such as):
               Load and read the input raw sets; merge three pairs data set (e.g.: X_train.txt, X_test.txt;

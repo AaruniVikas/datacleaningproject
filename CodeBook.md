@@ -176,80 +176,147 @@ The complete list of variables of each feature vector is available in 'features.
 
 * There are 180 observations of 68 variables.
 
-> str(tidydfrm) ## using 'str' function in R
 'data.frame':	180 obs. of  68 variables:
- $ activity                 : chr  "laying" "laying" "laying" "laying" ...
- $ subject                  : int  1 2 3 4 5 6 7 8 9 10 ...
- $ tbodyacc.mean.x          : num  0.222 0.281 0.276 0.264 0.278 ...
- $ tbodyacc.mean.y          : num  -0.0405 -0.0182 -0.019 -0.015 -0.0183 ...
- $ tbodyacc.mean.z          : num  -0.113 -0.107 -0.101 -0.111 -0.108 ...
- $ tbodyacc.std.x           : num  -0.928 -0.974 -0.983 -0.954 -0.966 ...
- $ tbodyacc.std.y           : num  -0.837 -0.98 -0.962 -0.942 -0.969 ...
- $ tbodyacc.std.z           : num  -0.826 -0.984 -0.964 -0.963 -0.969 ...
- $ tgravityacc.mean.x       : num  -0.249 -0.51 -0.242 -0.421 -0.483 ...
- $ tgravityacc.mean.y       : num  0.706 0.753 0.837 0.915 0.955 ...
- $ tgravityacc.mean.z       : num  0.446 0.647 0.489 0.342 0.264 ...
- $ tgravityacc.std.x        : num  -0.897 -0.959 -0.983 -0.921 -0.946 ...
- $ tgravityacc.std.y        : num  -0.908 -0.988 -0.981 -0.97 -0.986 ...
- $ tgravityacc.std.z        : num  -0.852 -0.984 -0.965 -0.976 -0.977 ...
- $ tbodyaccjerk.mean.x      : num  0.0811 0.0826 0.077 0.0934 0.0848 ...
- $ tbodyaccjerk.mean.y      : num  0.00384 0.01225 0.0138 0.00693 0.00747 ...
- $ tbodyaccjerk.mean.z      : num  0.01083 -0.0018 -0.00436 -0.00641 -0.00304 ...
- $ tbodyaccjerk.std.x       : num  -0.958 -0.986 -0.981 -0.978 -0.983 ...
- $ tbodyaccjerk.std.y       : num  -0.924 -0.983 -0.969 -0.942 -0.965 ...
- $ tbodyaccjerk.std.z       : num  -0.955 -0.988 -0.982 -0.979 -0.985 ...
- $ tbodygyro.mean.x         : num  -0.01655 -0.01848 -0.02082 -0.00923 -0.02189 ...
- $ tbodygyro.mean.y         : num  -0.0645 -0.1118 -0.0719 -0.093 -0.0799 ...
- $ tbodygyro.mean.z         : num  0.149 0.145 0.138 0.17 0.16 ...
- $ tbodygyro.std.x          : num  -0.874 -0.988 -0.975 -0.973 -0.979 ...
- $ tbodygyro.std.y          : num  -0.951 -0.982 -0.977 -0.961 -0.977 ...
- $ tbodygyro.std.z          : num  -0.908 -0.96 -0.964 -0.962 -0.961 ...
- $ tbodygyrojerk.mean.x     : num  -0.107 -0.102 -0.1 -0.105 -0.102 ...
- $ tbodygyrojerk.mean.y     : num  -0.0415 -0.0359 -0.039 -0.0381 -0.0404 ...
- $ tbodygyrojerk.mean.z     : num  -0.0741 -0.0702 -0.0687 -0.0712 -0.0708 ...
- $ tbodygyrojerk.std.x      : num  -0.919 -0.993 -0.98 -0.975 -0.983 ...
- $ tbodygyrojerk.std.y      : num  -0.968 -0.99 -0.987 -0.987 -0.984 ...
- $ tbodygyrojerk.std.z      : num  -0.958 -0.988 -0.983 -0.984 -0.99 ...
- $ tbodyaccmag.mean         : num  -0.842 -0.977 -0.973 -0.955 -0.967 ...
- $ tbodyaccmag.std          : num  -0.795 -0.973 -0.964 -0.931 -0.959 ...
- $ tgravityaccmag.mean      : num  -0.842 -0.977 -0.973 -0.955 -0.967 ...
- $ tgravityaccmag.std       : num  -0.795 -0.973 -0.964 -0.931 -0.959 ...
- $ tbodyaccjerkmag.mean     : num  -0.954 -0.988 -0.979 -0.97 -0.98 ...
- $ tbodyaccjerkmag.std      : num  -0.928 -0.986 -0.976 -0.961 -0.977 ...
- $ tbodygyromag.mean        : num  -0.875 -0.95 -0.952 -0.93 -0.947 ...
- $ tbodygyromag.std         : num  -0.819 -0.961 -0.954 -0.947 -0.958 ...
- $ tbodygyrojerkmag.mean    : num  -0.963 -0.992 -0.987 -0.985 -0.986 ...
- $ tbodygyrojerkmag.std     : num  -0.936 -0.99 -0.983 -0.983 -0.984 ...
- $ fbodyacc.mean.x          : num  -0.939 -0.977 -0.981 -0.959 -0.969 ...
- $ fbodyacc.mean.y          : num  -0.867 -0.98 -0.961 -0.939 -0.965 ...
- $ fbodyacc.mean.z          : num  -0.883 -0.984 -0.968 -0.968 -0.977 ...
- $ fbodyacc.std.x           : num  -0.924 -0.973 -0.984 -0.952 -0.965 ...
- $ fbodyacc.std.y           : num  -0.834 -0.981 -0.964 -0.946 -0.973 ...
- $ fbodyacc.std.z           : num  -0.813 -0.985 -0.963 -0.962 -0.966 ...
- $ fbodyaccjerk.mean.x      : num  -0.957 -0.986 -0.981 -0.979 -0.983 ...
- $ fbodyaccjerk.mean.y      : num  -0.922 -0.983 -0.969 -0.944 -0.965 ...
- $ fbodyaccjerk.mean.z      : num  -0.948 -0.986 -0.979 -0.975 -0.983 ...
- $ fbodyaccjerk.std.x       : num  -0.964 -0.987 -0.983 -0.98 -0.986 ...
- $ fbodyaccjerk.std.y       : num  -0.932 -0.985 -0.971 -0.944 -0.966 ...
- $ fbodyaccjerk.std.z       : num  -0.961 -0.989 -0.984 -0.98 -0.986 ...
- $ fbodygyro.mean.x         : num  -0.85 -0.986 -0.97 -0.967 -0.976 ...
- $ fbodygyro.mean.y         : num  -0.952 -0.983 -0.978 -0.972 -0.978 ...
- $ fbodygyro.mean.z         : num  -0.909 -0.963 -0.962 -0.961 -0.963 ...
- $ fbodygyro.std.x          : num  -0.882 -0.989 -0.976 -0.975 -0.981 ...
- $ fbodygyro.std.y          : num  -0.951 -0.982 -0.977 -0.956 -0.977 ...
- $ fbodygyro.std.z          : num  -0.917 -0.963 -0.967 -0.966 -0.963 ...
- $ fbodyaccmag.mean         : num  -0.862 -0.975 -0.966 -0.939 -0.962 ...
- $ fbodyaccmag.std          : num  -0.798 -0.975 -0.968 -0.937 -0.963 ...
- $ fbodybodyaccjerkmag.mean : num  -0.933 -0.985 -0.976 -0.962 -0.977 ...
- $ fbodybodyaccjerkmag.std  : num  -0.922 -0.985 -0.975 -0.958 -0.976 ...
- $ fbodybodygyromag.mean    : num  -0.862 -0.972 -0.965 -0.962 -0.968 ...
- $ fbodybodygyromag.std     : num  -0.824 -0.961 -0.955 -0.947 -0.959 ...
- $ fbodybodygyrojerkmag.mean: num  -0.942 -0.99 -0.984 -0.984 -0.985 ...
- $ fbodybodygyrojerkmag.std : num  -0.933 -0.989 -0.983 -0.983 -0.983 ...
+
+ $ activity                 : chr  
  
- ---------------------------------------------------------------------------------------------
- ---------------------------------------------------------------------------------------------
- ### Study Design Summary
+ $ subject                  : int  
+ 
+ $ tbodyacc.mean.x          : num 
+ 
+ $ tbodyacc.mean.y          : num  
+ 
+ $ tbodyacc.mean.z          : num  
+ 
+ $ tbodyacc.std.x           : num  
+ 
+ $ tbodyacc.std.y           : num 
+ 
+ $ tbodyacc.std.z           : num  
+ 
+ $ tgravityacc.mean.x       : num  
+ 
+ $ tgravityacc.mean.y       : num  
+ 
+ $ tgravityacc.mean.z       : num  
+ 
+ $ tgravityacc.std.x        : num  
+ 
+ $ tgravityacc.std.y        : num  
+ 
+ $ tgravityacc.std.z        : num  
+ 
+ $ tbodyaccjerk.mean.x      : num  
+ 
+ $ tbodyaccjerk.mean.y      : num 
+ 
+ $ tbodyaccjerk.mean.z      : num  
+ 
+ $ tbodyaccjerk.std.x       : num  
+ 
+ $ tbodyaccjerk.std.y       : num  
+ 
+ $ tbodyaccjerk.std.z       : num  
+ 
+ $ tbodygyro.mean.x         : num  
+ 
+ $ tbodygyro.mean.y         : num  
+ 
+ $ tbodygyro.mean.z         : num  
+ 
+ $ tbodygyro.std.x          : num  
+ 
+ $ tbodygyro.std.y          : num  
+ 
+ $ tbodygyro.std.z          : num  
+ 
+ $ tbodygyrojerk.mean.x     : num  
+ 
+ $ tbodygyrojerk.mean.y     : num  
+ 
+ $ tbodygyrojerk.mean.z     : num  
+ 
+ $ tbodygyrojerk.std.x      : num  
+ 
+ $ tbodygyrojerk.std.y      : num  
+ 
+ $ tbodygyrojerk.std.z      : num  
+ 
+ $ tbodyaccmag.mean         : num  
+ 
+ $ tbodyaccmag.std          : num  
+ 
+ $ tgravityaccmag.mean      : num  
+ 
+ $ tgravityaccmag.std       : num  
+ 
+ $ tbodyaccjerkmag.mean     : num  
+ 
+ $ tbodyaccjerkmag.std      : num  
+ 
+ $ tbodygyromag.mean        : num  
+ 
+ $ tbodygyromag.std         : num  
+ 
+ $ tbodygyrojerkmag.mean    : num  
+ 
+ $ tbodygyrojerkmag.std     : num  
+ 
+ $ fbodyacc.mean.x          : num  
+ 
+ $ fbodyacc.mean.y          : num  
+ 
+ $ fbodyacc.mean.z          : num  
+ 
+ $ fbodyacc.std.x           : num  
+ 
+ $ fbodyacc.std.y           : num  
+ 
+ $ fbodyacc.std.z           : num  
+ 
+ $ fbodyaccjerk.mean.x      : num  
+ 
+ $ fbodyaccjerk.mean.y      : num  
+ 
+ $ fbodyaccjerk.mean.z      : num  
+ 
+ $ fbodyaccjerk.std.x       : num  
+ 
+ $ fbodyaccjerk.std.y       : num  
+ 
+ $ fbodyaccjerk.std.z       : num  
+ 
+ $ fbodygyro.mean.x         : num  
+ 
+ $ fbodygyro.mean.y         : num  
+ 
+ $ fbodygyro.mean.z         : num  
+ 
+ $ fbodygyro.std.x          : num  
+ 
+ $ fbodygyro.std.y          : num  
+ 
+ $ fbodygyro.std.z          : num  
+ 
+ $ fbodyaccmag.mean         : num  
+ 
+ $ fbodyaccmag.std          : num  
+ 
+ $ fbodybodyaccjerkmag.mean : num  
+ 
+ $ fbodybodyaccjerkmag.std  : num  
+ 
+ $ fbodybodygyromag.mean    : num  
+ 
+ $ fbodybodygyromag.std     : num  
+ 
+ $ fbodybodygyrojerkmag.mean: num  
+ 
+ $ fbodybodygyrojerkmag.std : num  
+ 
+---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+### Study Design Summary
  
  * How to collect the data
  
@@ -296,27 +363,27 @@ This section is also in the section of "My work to the project" in README.md
         
 #### Create a tidy data via a R script called run_analysis.R
       
-    * Preparation:  data sets and script
-         + The data sets and run_analysis.R must be in same the working directory.
+  * Preparation:  data sets and script
+      + The data sets and run_analysis.R must be in same the working directory.
            (It is based on one of the requirements this project: The code should have 
             a file run_analysis.R in the main directory that can be run as long as the Samsung
             data is in your working directory. 
             (see "Instructions and Requirements" section in README.md)
       
-         + The input raw data for the run_analys.R are:
+      + The input raw data for the run_analys.R are:
         
             ./train/X_train.txt, ./train/y_train.txt, subject_train.txt;
             ./test/X_test.txt, ./test/y_test.txt,  subjecct_test.txt;
             ./activity_labels.txt, ./features.txt
         
-         + The output tidy data created from run_analysis.R are:
+      + The output tidy data created from run_analysis.R are:
             ./tidy_average_data.txt (180 rows)
             ./combinedcleaningdata.txt (optional)
         
-    * How the script run_analysis.R via Rstudio
-         + Run the script via source("run_analysis.R")
+  * How the script run_analysis.R works via Rstudio
+      + source("run_analysis.R") and the script
        
-         + There are 5 main steps in run_analysis.R to process the raw data sets and create the tidy data set.
+      + There are 5 main steps in run_analysis.R to process the raw data sets and create the tidy data set.
          
            Step-1: Merges the training and the test data sets to create one data set (such as):
               Load and read the input raw sets; merge three pairs data set (e.g.: X_train.txt, X_test.txt;
