@@ -78,16 +78,20 @@
         >unzip("Dataset.zip")
       
       + put the raw data sets in the selected working directory called "datacleaningproject"
-        that is same name as in a repo in my Github account. In other words, my working directory:
+        that is same name as in a repo in my Github account. 
+        (In other words, my working directory: "C:/Users/SJ/datacleaningproject")
         
         > getwd()
         
         [1] "C:/Users/SJ/datacleaningproject"
         
-### Make a tidy data via a R script called run_analysis.R
+### Create a tidy data via a R script called run_analysis.R
       
     * Preparation:  data sets and script
          + The data sets and run_analysis.R must be in the working directory.
+           It is based on one of the requirements this project: The code should have 
+	   a file run_analysis.R in the main directory that can be run as long as the Samsung
+	   data is in your working directory. (see "Instructions and Requirements")
       
          + The input raw data for the run_analys.R are:
         
@@ -118,17 +122,17 @@
                Coursera course Getting and Cleaning Data); characters "()" were replaced "" and
                characters "-" was replaced to "." via "gsub" function.
                
-           Step 3: Uses descriptive activity names to name the activities in the data set.
+           Step-3: Uses descriptive activity names to name the activities in the data set.
               This step is mainly to produce a one-column data frame called "joinlabel" containing
               descriptive activity names.
             
-           Step 4: Appropriately labels the data set with descriptive activity names.
+           Step-4: Appropriately labels the data set with descriptive activity names.
               The step is mainly to combine three joined data frames into one data frame called
               "cleandata". This is the first cleaned data frame toward to the final tidy data set.
               An (optional/temporary) output file is created called "combinedcleandata.txt" just in case
               for an emergency.
             
-           Step 5: Creates a second, independent tidy data set with the average of each variable
+           Step-5: Creates a second, independent tidy data set with the average of each variable
               for each activity and each subject.
               
               + It is necessary to install and to load the package "reshape2" before to perform
