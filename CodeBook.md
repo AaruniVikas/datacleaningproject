@@ -284,7 +284,7 @@ This section is also in the section of "My work to the project" in README.md
       
      + unzip the raw data sets
       
-   		 >unzip("Dataset.zip")
+   			>unzip("Dataset.zip")
       
      + put the raw data sets in the selected working directory called "datacleaningproject"
        that is same name as in a repo in my Github account. 
