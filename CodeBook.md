@@ -15,33 +15,33 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 -------------------------------------------------------------------------------------------------
 #### List of the original data sets inside the downloaded zip file:
 
-   - 'README.txt': describes about the general information and background related to the data sets within the zip file.
+ 	 - 'README.txt': describes about the general information and background related to the data sets within the zip file.
+	
+ 	 - 'features_info.txt': Shows information about the variables used on the feature vector.
 
-   - 'features_info.txt': Shows information about the variables used on the feature vector.
+   	 - 'features.txt': List of all features.
 
-   - 'features.txt': List of all features.
+   	 - 'activity_labels.txt': Links the class labels with their activity name.
 
-   - 'activity_labels.txt': Links the class labels with their activity name.
+   	 - 'train/X_train.txt': Training set.
 
-   - 'train/X_train.txt': Training set.
+   	 - 'train/y_train.txt': Training labels.
 
-   - 'train/y_train.txt': Training labels.
+   	 - 'test/X_test.txt': Test set.
 
-   - 'test/X_test.txt': Test set.
-
-   - 'test/y_test.txt': Test labels.
+   	 - 'test/y_test.txt': Test labels.
    
-   - 'train/subject_train.txt':   Each row identifies the subject who performed the activity for each window sample.
-      Its range is from 1 to 30. (for training set)
+    	 - 'train/subject_train.txt':   Each row identifies the subject who performed the activity for each window sample.
+            Its range is from 1 to 30. (for training set)
    
-   - 'test/subject_test.txt':  Each row identifies the subject who performed the activity for each window sample.
-      Its range is from 1 to 30. (for test set)
+  	 - 'test/subject_test.txt':  Each row identifies the subject who performed the activity for each window sample.
+  	    Its range is from 1 to 30. (for test set)
       
-     The following data sets are not been used in the current project. 
+   	  The following data sets are not been used in the current project. 
 
-   - 'train/Inertial Signals/total_acc_x_train.txt'; 'train/Inertial Signals/body_acc_x_train.txt';
-     'train/Inertial Signals/body_gyro_x_train.txt'. More information related to these three data sets can be
-     found in 'README.txt', 'feature_info.txt' and 'feature.txt' and the original website.
+   	 - 'train/Inertial Signals/total_acc_x_train.txt'; 'train/Inertial Signals/body_acc_x_train.txt';
+   	   'train/Inertial Signals/body_gyro_x_train.txt'. More information related to these three data sets can be
+   	    found in 'README.txt', 'feature_info.txt' and 'feature.txt' and the original website.
     
 -------------------------------------------------------------------------------------------------------------
 #### Background: feature selection, feature vector variables and unit
@@ -73,56 +73,56 @@ The following information is the hightlights/summary of the 'feature_info.txt' a
 >These signals were used to estimate variables of the feature vector for each pattern:  
 >'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 >
->tBodyAcc-XYZ
->tGravityAcc-XYZ
->tBodyAccJerk-XYZ
->tBodyGyro-XYZ
->tBodyGyroJerk-XYZ
->tBodyAccMag
->tGravityAccMag
->tBodyAccJerkMag
->tBodyGyroMag
->tBodyGyroJerkMag
->fBodyAcc-XYZ
->fBodyAccJerk-XYZ
->fBodyGyro-XYZ
->fBodyAccMag
->fBodyAccJerkMag
->fBodyGyroMag
->fBodyGyroJerkMag
+>		tBodyAcc-XYZ
+>		tGravityAcc-XYZ
+>		tBodyAccJerk-XYZ
+>		tBodyGyro-XYZ
+>		tBodyGyroJerk-XYZ
+>		tBodyAccMag
+>		tGravityAccMag
+>		tBodyAccJerkMag
+>		tBodyGyroMag
+>		tBodyGyroJerkMag
+>		fBodyAcc-XYZ
+>		fBodyAccJerk-XYZ
+>		fBodyGyro-XYZ
+>		fBodyAccMag
+>		fBodyAccJerkMag
+>		fBodyGyroMag
+>		fBodyGyroJerkMag
 >
->Additional vectors obtained by averaging the signals in a signal window sample. 
->These are used on the angle() variable:
+>	Additional vectors obtained by averaging the signals in a signal window sample. 
+>	These are used on the angle() variable:
 >
->gravityMean
->tBodyAccMean
->tBodyAccJerkMean
->tBodyGyroMean
->tBodyGyroJerkMean
+>		gravityMean
+>		tBodyAccMean
+>		tBodyAccJerkMean
+>		tBodyGyroMean
+>		tBodyGyroJerkMean
 >
->The set of variables that were estimated from these signals are: 
+>	The set of variables that were estimated from these signals are: 
 >
->mean(): Mean value
->std(): Standard deviation
->mad(): Median absolute deviation 
->max(): Largest value in array
->min(): Smallest value in array
->sma(): Signal magnitude area
->energy(): Energy measure. Sum of the squares divided by the number of values. 
->iqr(): Interquartile range 
->entropy(): Signal entropy
->arCoeff(): Autorregresion coefficients with Burg order equal to 4
->correlation(): correlation coefficient between two signals
->maxInds(): index of the frequency component with largest magnitude
->meanFreq(): Weighted average of the frequency components to obtain a mean frequency
->skewness(): skewness of the frequency domain signal 
->kurtosis(): kurtosis of the frequency domain signal 
->bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
->angle(): Angle between to vectors.
+>		mean(): Mean value
+>		std(): Standard deviation
+>		mad(): Median absolute deviation 
+>		max(): Largest value in array
+>		min(): Smallest value in array
+>		sma(): Signal magnitude area
+>		energy(): Energy measure. Sum of the squares divided by the number of values. 
+>		iqr(): Interquartile range 
+>		entropy(): Signal entropy
+>		arCoeff(): Autorregresion coefficients with Burg order equal to 4
+>		correlation(): correlation coefficient between two signals
+>		maxInds(): index of the frequency component with largest magnitude
+>		meanFreq(): Weighted average of the frequency components to obtain a mean frequency
+>		skewness(): skewness of the frequency domain signal 
+>		kurtosis(): kurtosis of the frequency domain signal 
+>		bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
+>		angle(): Angle between to vectors.
 
 ##### Unit:
 
-  Features are normalized and bounded within [-1,1]. In other words, they are unitless.
+Features are normalized and bounded within [-1,1]. In other words, they are unitless.
 
 ------------------------------------------------------------------------------------------------
 #### Original data sets: selected input data variables
@@ -176,75 +176,75 @@ The complete list of variables of each feature vector is available in 'features.
 
 * There are 180 observations of 68 variables.
 
-	'data.frame':	180 obs. of  68 variables:
-	 $ activity                 : chr  
-	 $ subject                  : int  
-	 $ tbodyacc.mean.x          : num 
-	 $ tbodyacc.mean.y          : num  
-	 $ tbodyacc.mean.z          : num  
-	 $ tbodyacc.std.x           : num  
-	 $ tbodyacc.std.y           : num 
- 	 $ tbodyacc.std.z           : num  
-	 $ tgravityacc.mean.x       : num   
-	 $ tgravityacc.mean.y       : num  
-	 $ tgravityacc.mean.z       : num   
-	 $ tgravityacc.std.x        : num  
-	 $ tgravityacc.std.y        : num  
-	 $ tgravityacc.std.z        : num  
-	 $ tbodyaccjerk.mean.x      : num  
-	 $ tbodyaccjerk.mean.y      : num 
- 	 $ tbodyaccjerk.mean.z      : num  
-	 $ tbodyaccjerk.std.x       : num  
-	 $ tbodyaccjerk.std.y       : num  
-	 $ tbodyaccjerk.std.z       : num  
-	 $ tbodygyro.mean.x         : num  
-	 $ tbodygyro.mean.y         : num  
-	 $ tbodygyro.mean.z         : num  
-	 $ tbodygyro.std.x          : num  
-	 $ tbodygyro.std.y          : num  
-	 $ tbodygyro.std.z          : num  	 
-	 $ tbodygyrojerk.mean.x     : num  
-	 $ tbodygyrojerk.mean.y     : num  
-	 $ tbodygyrojerk.mean.z     : num  
-	 $ tbodygyrojerk.std.x      : num  
-	 $ tbodygyrojerk.std.y      : num  
-	 $ tbodygyrojerk.std.z      : num  
-	 $ tbodyaccmag.mean         : num  
-	 $ tbodyaccmag.std          : num  
-	 $ tgravityaccmag.mean      : num  
-	 $ tgravityaccmag.std       : num  
-	 $ tbodyaccjerkmag.mean     : num  
- 	 $ tbodyaccjerkmag.std      : num  
- 	 $ tbodygyromag.mean        : num  
-	 $ tbodygyromag.std         : num  
-	 $ tbodygyrojerkmag.mean    : num  
-	 $ tbodygyrojerkmag.std     : num  
-	 $ fbodyacc.mean.x          : num   
-	 $ fbodyacc.mean.y          : num  
-	 $ fbodyacc.mean.z          : num  
-	 $ fbodyacc.std.x           : num  
-	 $ fbodyacc.std.y           : num  
-	 $ fbodyacc.std.z           : num  
-	 $ fbodyaccjerk.mean.x      : num  
-	 $ fbodyaccjerk.mean.y      : num  
-	 $ fbodyaccjerk.mean.z      : num  
-	 $ fbodyaccjerk.std.x       : num  
-	 $ fbodyaccjerk.std.y       : num  
- 	 $ fbodyaccjerk.std.z       : num  
-	 $ fbodygyro.mean.x         : num  
-	 $ fbodygyro.mean.y         : num  
-	 $ fbodygyro.mean.z         : num  
-	 $ fbodygyro.std.x          : num  
-	 $ fbodygyro.std.y          : num  
-	 $ fbodygyro.std.z          : num  
-	 $ fbodyaccmag.mean         : num  
-	 $ fbodyaccmag.std          : num  
-	 $ fbodybodyaccjerkmag.mean : num  
-	 $ fbodybodyaccjerkmag.std  : num  
-	 $ fbodybodygyromag.mean    : num  
-	 $ fbodybodygyromag.std     : num  
-	 $ fbodybodygyrojerkmag.mean: num  
-	 $ fbodybodygyrojerkmag.std : num  
+		'data.frame':	180 obs. of  68 variables:
+		 $ activity                 : chr  
+		 $ subject                  : int  
+		 $ tbodyacc.mean.x          : num 
+		 $ tbodyacc.mean.y          : num  
+		 $ tbodyacc.mean.z          : num  
+		 $ tbodyacc.std.x           : num  
+		 $ tbodyacc.std.y           : num 
+ 		 $ tbodyacc.std.z           : num  
+		 $ tgravityacc.mean.x       : num   
+		 $ tgravityacc.mean.y       : num  
+		 $ tgravityacc.mean.z       : num   
+		 $ tgravityacc.std.x        : num  
+		 $ tgravityacc.std.y        : num  
+		 $ tgravityacc.std.z        : num  
+		 $ tbodyaccjerk.mean.x      : num  
+		 $ tbodyaccjerk.mean.y      : num 
+ 		 $ tbodyaccjerk.mean.z      : num  
+		 $ tbodyaccjerk.std.x       : num  
+		 $ tbodyaccjerk.std.y       : num  
+		 $ tbodyaccjerk.std.z       : num  
+		 $ tbodygyro.mean.x         : num  
+		 $ tbodygyro.mean.y         : num  
+		 $ tbodygyro.mean.z         : num  
+		 $ tbodygyro.std.x          : num  
+		 $ tbodygyro.std.y          : num  
+		 $ tbodygyro.std.z          : num  	 
+		 $ tbodygyrojerk.mean.x     : num  
+		 $ tbodygyrojerk.mean.y     : num  
+		 $ tbodygyrojerk.mean.z     : num  
+		 $ tbodygyrojerk.std.x      : num  
+		 $ tbodygyrojerk.std.y      : num  
+		 $ tbodygyrojerk.std.z      : num  
+		 $ tbodyaccmag.mean         : num  
+		 $ tbodyaccmag.std          : num  
+		 $ tgravityaccmag.mean      : num  
+		 $ tgravityaccmag.std       : num  
+		 $ tbodyaccjerkmag.mean     : num  
+ 		 $ tbodyaccjerkmag.std      : num  
+ 		 $ tbodygyromag.mean        : num  
+		 $ tbodygyromag.std         : num  
+		 $ tbodygyrojerkmag.mean    : num  
+		 $ tbodygyrojerkmag.std     : num  
+		 $ fbodyacc.mean.x          : num   
+		 $ fbodyacc.mean.y          : num  
+		 $ fbodyacc.mean.z          : num  
+		 $ fbodyacc.std.x           : num  
+		 $ fbodyacc.std.y           : num  
+		 $ fbodyacc.std.z           : num  
+		 $ fbodyaccjerk.mean.x      : num  
+		 $ fbodyaccjerk.mean.y      : num  
+		 $ fbodyaccjerk.mean.z      : num  
+		 $ fbodyaccjerk.std.x       : num  
+		 $ fbodyaccjerk.std.y       : num  
+ 		 $ fbodyaccjerk.std.z       : num  
+		 $ fbodygyro.mean.x         : num  
+		 $ fbodygyro.mean.y         : num  
+		 $ fbodygyro.mean.z         : num  
+		 $ fbodygyro.std.x          : num  
+		 $ fbodygyro.std.y          : num  
+		 $ fbodygyro.std.z          : num  
+		 $ fbodyaccmag.mean         : num  
+		 $ fbodyaccmag.std          : num  
+		 $ fbodybodyaccjerkmag.mean : num  
+		 $ fbodybodyaccjerkmag.std  : num  
+		 $ fbodybodygyromag.mean    : num  
+		 $ fbodybodygyromag.std     : num  
+		 $ fbodybodygyrojerkmag.mean: num  
+		 $ fbodybodygyrojerkmag.std : num  
  
 ---------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------
@@ -277,21 +277,22 @@ This section is also in the section of "My work to the project" in README.md
       https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
       
      + using the following R command to download the data:
-       >setInternet2(TRUE)   
-       >url_proj <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-       >download.file(urlproj, destfile="Dataset.zip", mode="wb")
+     
+      		 >setInternet2(TRUE)   
+      		 >url_proj <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+      		 >download.file(urlproj, destfile="Dataset.zip", mode="wb")
       
      + unzip the raw data sets
       
-       >unzip("Dataset.zip")
+   		 >unzip("Dataset.zip")
       
      + put the raw data sets in the selected working directory called "datacleaningproject"
        that is same name as in a repo in my Github account. 
        (In other words, my working directory: "C:/Users/SJ/datacleaningproject")
         
-       >getwd()
+     		  >getwd()
         
-        [1] "C:/Users/SJ/datacleaningproject"
+     		  [1] "C:/Users/SJ/datacleaningproject"
         
 #### Create a tidy data via a R script called run_analysis.R
       
@@ -314,8 +315,9 @@ This section is also in the section of "My work to the project" in README.md
         
  * How the script run_analysis.R works via Rstudio
      + usage:
-           > source("run_analysis.R") ## load the script
-           > run_analysis() ##run the script
+     
+      		     > source("run_analysis.R") ## load the script
+      		     > run_analysis() ##run the script
        
      + There are 5 main steps in run_analysis.R to process the raw data sets and create the tidy data set.
 
