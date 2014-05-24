@@ -69,21 +69,22 @@
       https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
       
    + using the following R command to download the data:
-      >setInternet2(TRUE)   
-      >url_proj <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-      >download.file(urlproj, destfile="Dataset.zip", mode="wb")
+   
+              >setInternet2(TRUE)   
+              >url_proj <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+              >download.file(urlproj, destfile="Dataset.zip", mode="wb")
       
    + unzip the raw data sets
       
-     >unzip("Dataset.zip")
+              >unzip("Dataset.zip")
       
    + put the raw data sets in the selected working directory called "datacleaningproject"
         that is same name as in a repo in my Github account. 
         (In other words, my working directory: "C:/Users/SJ/datacleaningproject")
         
-    > getwd()
+              > getwd()
         
-    [1] "C:/Users/SJ/datacleaningproject"
+             [1] "C:/Users/SJ/datacleaningproject"
         
 ### Create a tidy data via a R script called run_analysis.R
       
@@ -95,18 +96,20 @@
       
      + The input raw data for the run_analys.R are:
         
-            ./train/X_train.txt, ./train/y_train.txt, subject_train.txt;
-            ./test/X_test.txt, ./test/y_test.txt,  subjecct_test.txt;
-            ./activity_labels.txt, ./features.txt
+               ./train/X_train.txt, ./train/y_train.txt, subject_train.txt;
+               ./test/X_test.txt, ./test/y_test.txt,  subjecct_test.txt;
+               ./activity_labels.txt, ./features.txt
         
      + The output tidy data created from run_analysis.R are:
-            ./tidy_average_data.txt (180 rows)
-            ./combinedcleaningdata.txt (optional)
+     
+               ./tidy_average_data.txt (180 rows)
+               ./combinedcleaningdata.txt (optional)
         
 * How the script run_analysis.R works via Rstudio
     + usage:
-           > source("run_analysis.R") ## load the script
-           > run_analysis() ##run the script
+    
+               > source("run_analysis.R") ## load the script
+               > run_analysis() ##run the script
        
     + There are 5 main steps in run_analysis.R to process the raw data sets and create the tidy data set.
     
